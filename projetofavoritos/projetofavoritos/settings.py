@@ -121,5 +121,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_FILES_DIRES=[
-    'estaticos',
+    'estaticos'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = 'novo_cliente'
+
 ]
