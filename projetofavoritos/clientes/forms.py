@@ -1,12 +1,14 @@
 from django.forms import ModelForm
-from .models import Novo_cliente 
+from .models import Cliente
+from django import forms
 
 
-class Novocliente_form(ModelForm):
-     class Meta:
-        model: Novo_cliente
-        fields = ['nome', 'email']
-
-class Cliente_form(ModelForm):
-        nome = forms.CharField(max_length=200),
-        email = forms.EmailField(max_length=100),
+class ClienteForm(ModelForm):
+    class Meta:
+        model = Cliente
+        fields = '__all__'
+        widgets = {
+            'nome': forms.TextInput(attrs={'placeholder': 'Nome'}),
+	    'sobrenome': forms.TextInput(attrs={'placeholder': 'Sobrenome'}),
+            'email': forms.TextInput(attrs={'placeholder': 'E-mail'}),
+        }
