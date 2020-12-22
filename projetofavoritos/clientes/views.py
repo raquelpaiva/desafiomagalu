@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ClienteForm
 from .models import Cliente
-# Create your views here.
 
 
 def index(request):

@@ -1,5 +1,4 @@
 from django.urls import path, include
-from . import views
 from .views import atualizar_cliente
 from .views import deletar_cliente
 from .views import index
